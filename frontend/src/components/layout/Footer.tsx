@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="mt-10 bg-black text-text py-10 border border-black w-[100%]">
-      <div className="container h-[100%] flex flex-col justify-between mx-auto">
+      <div className="container h-[100%] flex flex-col justify-between mx-auto overflow-hidden">
         <div className=" flex justify-between mt-16">
           <div className="flex flex-col space-y-4">
             <div className="text-3xl font-bold mb-1">Buyzium</div>

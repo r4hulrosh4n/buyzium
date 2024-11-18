@@ -56,10 +56,7 @@ const Featured = (props: Props) => {
 
   return (
     <div className="relative w-full h-[340px] bg-black ml-10 mt-10 xl:pl-20 flex justify-end overflow-hidden">
-      <div
-        className="w-full flex transition-transform duration-1000"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-      >
+      <div className="w-full flex transition-transform duration-1000" style={{ transform: `translateX(-${currentIndex * 100}%)` }} >
         {featuredSlides.map((slide) => (
           <div
             key={slide.id}

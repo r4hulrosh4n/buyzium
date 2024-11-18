@@ -14,11 +14,12 @@ const Contact = (props: Props) => {
         <div className="w-[1px] rotate-[24deg] mx-4 h-4 opacity-50 bg-black"></div>
         <a href="/contact">Contact</a>
       </div>
-      <div className="my-20 w-full flex justify-between gap-10 p-1">
-        <div className="basis-2/6 flex p-8 justify-center rounded items-center flex-col gap-10 shadow-md shrink-0 max-w-96">
+      <div className="my-20 w-full flex space-x-10 p-1 ">
+        <div className="basis-2/6 flex p-8 justify-center items-center flex-col gap-10 shadow-lg shrink-0">
           <div className="w-full flex flex-col gap-4 border-b pb-10">
             <div className="flex justify-start items-center gap-4">
-              <div className="p-2 rounded-full bg-secondary2 mb-2">
+              <div className="p-2 rounded-full bg-secondary2">
+                {" "}
                 <Phone className="text-white" />
               </div>
               <p className="font-medium">Call To Us</p>
@@ -28,7 +29,7 @@ const Contact = (props: Props) => {
           </div>
           <div className="w-full flex flex-col gap-4 pb-4">
             <div className="flex justify-start items-center gap-4">
-              <div className="p-2 rounded-full bg-secondary2 mb-2">
+              <div className="p-2 rounded-full bg-secondary2">
                 <MailBox className="text-white" />
               </div>
               <p className="font-medium">Write To US</p>
@@ -40,42 +41,21 @@ const Contact = (props: Props) => {
             <p className="text-sm">Emails: support@exclusive.com</p>
           </div>
         </div>
-        <form className="basis-4/6 flex p-8 justify-center rounded items-center flex-col gap-10 w-full shadow-md text-text2">
+        <form className="basis-4/6 flex p-8 justify-center items-center flex-col gap-10 w-full shadow-lg">
           <div className="w-full h-12 flex gap-4">
             <div className="flex-1 h-full">
-              <input
-                alt="Name"
-                type="text"
-                placeholder="Your Name *"
-                className="h-full rounded w-full px-4 placeholder: bg-secondary outline-none"
-              />
+            <input alt="Name" placeholder="Your Name *" className="h-full w-full px-4 placeholder: bg-secondary outline-none" />
             </div>
             <div className="flex-1 h-full">
-              <input
-                alt="email"
-                type="text"
-                placeholder="Your Email *"
-                className="h-full rounded w-full px-4 placeholder: bg-secondary outline-none"
-              />
+            <input alt="Name" placeholder="Your Name *" className="h-full w-full px-4 placeholder: bg-secondary outline-none" />
             </div>
             <div className="flex-1 h-full">
-              <input
-                alt="Phone"
-                type="text"
-                placeholder="Your Phone *"
-                className="h-full rounded w-full px-4 placeholder: bg-secondary outline-none"
-              />
+            <input alt="Name" placeholder="Your Name *" className="h-full w-full px-4 placeholder: bg-secondary outline-none" />
             </div>
           </div>
-          <div className="w-full flex-1 p-4 bg-secondary rounded ">
-            <textarea
-              placeholder="Your Message"
-              className="w-full h-full bg-secondary outline-none resize-none"
-            ></textarea>
-          </div>
-
+          <div className="w-full flex-1 bg-secondary rounded"></div>
           <div className="w-full h-14 flex justify-end items-center">
-            <button className="h-full bg-secondary2 rounded text-text px-12 font-medium active:bg-red-600 active:shadow-bg hover:shadow-md">
+            <button className="h-full bg-secondary2 rounded text-text px-12 font-medium">
               Send Message
             </button>
           </div>
@@ -86,3 +66,38 @@ const Contact = (props: Props) => {
 };
 
 export default Contact;
+<form className="w-full bg-white p-6 shadow-md rounded-lg">
+  <h2 className="text-xl font-bold mb-6">Contact Us</h2>
+  <div className="mb-4">
+    <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+      Name
+    </label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Your Name"
+      className="w-full mt-2 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      required
+    />
+  </div>
+  <div className="mb-4">
+    <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+      Phone
+    </label>
+    <input
+      type="tel"
+      id="phone"
+      name="phone"
+      placeholder="Your Phone Number"
+      className="w-full mt-2 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      required
+    />
+  </div>
+  <button
+    type="submit"
+    className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition duration-300"
+  >
+    Submit
+  </button>
+</form>;

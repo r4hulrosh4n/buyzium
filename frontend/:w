@@ -1,0 +1,85 @@
+import Phone from "@/assets/icons/Phone";
+import React from "react";
+
+type Props = {};
+
+const Contact = (props: Props) => {
+  return (
+    <div className="container flex flex-col mx-auto my-20 overflow-x-hidden">
+      <div className="inline-flex items-center mb-8">
+        <a href="/" className="text-text1">
+          Home
+        </a>
+        <div className="w-[1px] rotate-[24deg] mx-4 h-4 opacity-50 bg-black"></div>
+        <a href="/contact">Contact</a>
+      </div>
+      <div className="mt-20 w-full flex space-x-10 p-1 ">
+        <div className="basis-2/6 flex p-8 justify-center items-center flex-col gap-10 shadow-sm">
+
+          <div className="w-full flex flex-col gap-4 border-b">
+            <div className="flex justify-start items-center gap-4">
+              <div className="p-2 rounded-full bg-secondary2"> <Phone className="text-white" /> </div>
+              <p className="font-medium">Call To Us</p>
+            </div>
+            <p className="text-sm">We are available 24/7, 7 days a week.</p>
+            <p className="text-sm">Phone: +8801611112222</p>
+          </div>
+          <div className="w-full flex flex-col gap-4 pb-4">
+            <div className="flex justify-start items-center gap-4">
+              <div className="p-2 rounded-full bg-secondary2"> <Phone className="text-white" /> </div>
+              <p className="font-medium">Call To Us</p>
+            </div>
+            <p className="text-sm">We are available 24/7, 7 days a week.</p>
+            <p className="text-sm">Phone: +8801611112222</p>
+          </div>
+
+        </div>
+        <div className="basis-4/6">
+          <form className="w-full bg-white p-6 shadow-md rounded-lg">
+            <h2 className="text-xl font-bold mb-6">Contact Us</h2>
+            <div className="mb-4">
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                className="w-full mt-2 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                required
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="phone"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Phone
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Your Phone Number"
+                className="w-full mt-2 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                required
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition duration-300"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;

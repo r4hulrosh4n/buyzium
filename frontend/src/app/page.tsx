@@ -4,7 +4,7 @@ import CategoryBrowser from "@/components/HomePage/CategoryBrowser/CategoryBrows
 import BestSellingProducts from "@/components/HomePage/BestSellingProducts/BestSellingProducts";
 import Sponcered from "@/components/HomePage/Sponsored/Sponcered";
 import ExploreOurProducts from "@/components/HomePage/ExploreOurProducts/ExploreOurProducts";
-import Assurity from "@/components/HomePage/Assurity/Assurity";
+import Assurity from "@/components/common/UI/Assurity/Assurity";
 
 export default function Home() {
   return (

@@ -20,6 +20,9 @@ const SignUp = (props: Props) => {
         <Image
           src={LeftImg}
           alt="Shopping Cart and Mobile"
+          style={{
+            objectFit: "cover",
+          }}
           className="w-full max-w-4xl"
         />
       </div>
@@ -110,10 +113,7 @@ const SignUp = (props: Props) => {
               <button className="w-36 py-3 bg-secondary2 text-white rounded font-medium">
                 Log ln
               </button>
-              <a
-                href="#"
-                className="font-regular text-secondary2"
-              >
+              <a href="#" className="font-regular text-secondary2">
                 Forget Password?
               </a>
             </div>

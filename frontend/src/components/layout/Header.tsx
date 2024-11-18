@@ -6,12 +6,12 @@ import { useState } from "react";
 const Header = () => {
   const [isLoggedIn, setisLoggedIn] = useState(true);
   return (
-    <header className="bg-bg h-24 text-text2 flex items-center flex-col justify-end after:absolute after:bg-gray-300 after:w-full after:h-[1px]">
+    <header className="w-full bg-bg h-24 text-text2 flex items-center flex-col justify-end after:hidden lg:after:block after:absolute after:bg-gray-300 after:w-full after:h-[1px]">
       <div className="container mx-auto navbar h-12 mb-3 flex flex-row justify-between items-center">
         <a href="/" className="text-3xl font-bold tracking-wide">
           Buyzium
         </a>
-        <ul className="flex flex-row items-center justify-center space-x-12">
+        <ul className="hidden md:flex flex-row items-center justify-center space-x-12">
           <li className="list-none text-base">
             <a
               href="/"
@@ -71,7 +71,7 @@ const Header = () => {
           </div>
           <a
             href="/wishlist"
-            className="relative after:content-['1'] after:text-primary after:absolute after:bottom-3 after:left-3 after:bg-secondary2 after:w-4 after:h-4 after:text-xs after:rounded-full after:flex after:items-center after:justify-center my-auto cursor-pointer hover:shadow-black"
+            className="hidden sm:block relative after:content-['1'] after:text-primary after:absolute after:bottom-3 after:left-3 after:bg-secondary2 after:w-4 after:h-4 after:text-xs after:rounded-full after:flex after:items-center after:justify-center my-auto cursor-pointer hover:shadow-black"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +90,7 @@ const Header = () => {
           </a>
           <a
             href="/cart"
-            className="relative after:content-['4'] after:text-primary after:absolute after:bottom-3 after:left-3 after:bg-secondary2 after:w-4 after:h-4 after:text-xs after:rounded-full after:flex after:items-center after:justify-center my-auto cursor-pointer hover:shadow-black"
+            className="hidden sm:block relative after:content-['4'] after:text-primary after:absolute after:bottom-3 after:left-3 after:bg-secondary2 after:w-4 after:h-4 after:text-xs after:rounded-full after:flex after:items-center after:justify-center my-auto cursor-pointer hover:shadow-black"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +109,7 @@ const Header = () => {
               <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
             </svg>
           </a>
-          <a href="/account" className="my-auto cursor-pointer">
+          <a href="/account" className="hidden sm:block my-auto cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
