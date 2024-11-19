@@ -6,51 +6,53 @@ import { useState } from "react";
 const Header = () => {
   const [isLoggedIn, setisLoggedIn] = useState(true);
   return (
-    <header className="w-full bg-bg h-24 text-text2 flex items-center flex-col justify-end after:hidden lg:after:block after:absolute after:bg-gray-300 after:w-full after:h-[1px]">
+    <header className="w-full sticky top-0 bg-bg h-24 z-40 text-text2 flex items-center flex-col justify-end after:hidden lg:after:block after:absolute after:bg-gray-300 after:w-full after:h-[1px]">
       <div className="container mx-auto navbar h-12 mb-3 flex flex-row justify-between items-center">
         <a href="/" className="text-3xl font-bold tracking-wide">
           Buyzium
         </a>
-        <ul className="hidden md:flex flex-row items-center justify-center space-x-12">
-          <li className="list-none text-base">
-            <a
-              href="/"
-              className="cursor-pointer border-b-[2px] border-b-gray-400 pb-[2px] border-black"
-            >
-              Home
-            </a>
-          </li>
-          <li className="list-none text-base">
-            <a
-              href="/contact"
-              className="cursor-pointer border-b-gray-400 pb-[2px] border-black"
-            >
-              Contact
-            </a>
-          </li>
-          <li className="list-none text-base">
-            <a
-              href="/about"
-              className="cursor-pointer border-b-gray-400 pb-[2px] border-black"
-            >
-              About
-            </a>
-          </li>
-          <li className="list-none text-base">
-            <a
-              href="/signup"
-              className="cursor-pointer border-b-gray-400 pb-[2px] border-black"
-            >
-              Sign Up
-            </a>
-          </li>
-        </ul>
+        <nav className="hidden sm:block">
+          <ul className="flex flex-row items-center justify-center space-x-12">
+            <li className="list-none text-base">
+              <a
+                href="/"
+                className="cursor-pointer border-b-[2px] border-b-gray-400 pb-[2px] border-black"
+              >
+                Home
+              </a>
+            </li>
+            <li className="list-none text-base">
+              <a
+                href="/contact"
+                className="cursor-pointer border-b-gray-400 pb-[2px] border-black"
+              >
+                Contact
+              </a>
+            </li>
+            <li className="list-none text-base">
+              <a
+                href="/about"
+                className="cursor-pointer border-b-gray-400 pb-[2px] border-black"
+              >
+                About
+              </a>
+            </li>
+            <li className="list-none text-base">
+              <a
+                href="/signup"
+                className="cursor-pointer border-b-gray-400 pb-[2px] border-black"
+              >
+                Sign Up
+              </a>
+            </li>
+          </ul>
+        </nav>
         <div className="flex flex-row space-x-8">
-          <div className="flex bg-secondary rounded py-2">
+          <div className="relative flex bg-secondary rounded py-2">
             <input
-              className="px-4 w-52 placeholder:text-xs text-xs outline-none bg-secondary"
+              className="px-4 w-60 placeholder:text-xs text-xs outline-none bg-secondary"
               placeholder="What are you looking for?"
-            ></input>
+            />{" "}
             <span className="px-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -68,6 +70,11 @@ const Header = () => {
                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
               </svg>
             </span>
+            <div className="absolute flex flex-col gap-2 px-4 py-2 border-x-2 border-b-2 border-secondary bg-bg rounded-b shadow-bg w-full h-44 z-50 top-10">
+              <ul className="">
+                <a className="text-xs font-medium">blanket of world</a>
+              </ul>
+            </div>
           </div>
           <a
             href="/wishlist"
