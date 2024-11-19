@@ -33,7 +33,7 @@ interface BaseLayoutProps {
 export default function RootLayout({ children }: BaseLayoutProps) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={`${poppins.className} overflow-x-hidden`}>
         <BaseLayout>{children}</BaseLayout>
       </body>
     </html>

@@ -6,7 +6,7 @@ type Props = {}
 
 const OurStory = (props: Props) => {
   return (
-      <div className="relative w-full h-[750px] mb-40 flex items-center">
+      <div className="relative w-[100%] h-[750px] mb-40 flex items-center">
         <div className="flex-1">
           <div className="flex flex-col justify-center w-[550px] items-start gap-10">
             <h1 className="text-5xl tracking-wider font-semibold">Our Story</h1>
@@ -32,7 +32,7 @@ const OurStory = (props: Props) => {
           style={{
             objectFit: "cover",
           }}
-          className="left-1/2 h-[750px] w-auto absolute left-0"
+          className="left-1/2 h-[700px] w-auto absolute left-0"
         />
       </div>
   )

@@ -8,7 +8,7 @@ type Props = {};
 
 const About = (props: Props) => {
   return (
-    <div className="container flex flex-col mx-auto my-20 overflow-x-hidden">
+    <div className="container flex flex-col mx-auto my-10">
       <div className="inline-flex items-center mb-8">
         <a href="/" className="text-text1">
           Home

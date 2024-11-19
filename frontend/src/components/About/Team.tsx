@@ -28,10 +28,8 @@ const Team = () => {
   }, [Members.length]);
 
   return (
-    <div
-      className="flex mb-24 transition-transform duration-1000"
-      style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-    >
+    <div className="w-full overflow-x-hidden">
+    <div className="w-full flex mb-24 transition-transform duration-1000 " style={{ transform: `translateX(-${currentIndex * 100}%)` }} >
       {Members.map((group, index) => (
         <div
           key={index}
@@ -81,6 +79,7 @@ const Team = () => {
           ))}
         </div>
       ))}
+      </div>
     </div>
   );
 };

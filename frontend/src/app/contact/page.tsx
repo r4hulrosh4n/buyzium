@@ -6,7 +6,7 @@ type Props = {};
 
 const Contact = (props: Props) => {
   return (
-    <div className="container flex flex-col mx-auto my-20 overflow-x-hidden">
+    <div className="container flex flex-col mx-auto my-10 overflow-x-hidden">
       <div className="inline-flex items-center mb-8">
         <a href="/" className="text-text1">
           Home
@@ -14,7 +14,7 @@ const Contact = (props: Props) => {
         <div className="w-[1px] rotate-[24deg] mx-4 h-4 opacity-50 bg-black"></div>
         <a href="/contact">Contact</a>
       </div>
-      <div className="my-20 w-full flex justify-between gap-10 p-1">
+      <div className="my-10 w-full flex justify-between gap-10 p-1">
         <div className="basis-2/6 flex p-8 justify-center rounded items-center flex-col gap-10 shadow-md shrink-0 max-w-96">
           <div className="w-full flex flex-col gap-4 border-b pb-10">
             <div className="flex justify-start items-center gap-4">
