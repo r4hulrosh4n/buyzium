@@ -82,6 +82,7 @@ const Featured = (props: Props) => {
             <Image
               src={slide.image}
               alt="Featured"
+              priority
               className="pt-6 object-contain"
             />
           </div>

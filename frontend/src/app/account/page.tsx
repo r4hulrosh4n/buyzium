@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 type Props = {};
 
@@ -6,11 +7,11 @@ const Account = (props: Props) => {
   return (
     <div className="container flex flex-col mx-auto my-10 overflow-x-hidden">
       <div className="inline-flex items-center mb-8">
-        <a href="/" className="text-text1">
+        <Link href="/" className="text-text1">
           Home
-        </a>
+        </Link>
         <div className="w-[1px] rotate-[24deg] mx-4 h-4 opacity-50 bg-black"></div>
-        <a href="/account">Account</a>
+        <Link href="/account">Account</Link>
       </div>
       <div className="flex my-10 justify-between gap-12">
         <div className="flex flex-col items-start max-w-64 min-w-52 flex-1 h-80 gap-2">

@@ -5,10 +5,11 @@ import BestSellingProducts from "@/components/HomePage/BestSellingProducts/BestS
 import Sponcered from "@/components/HomePage/Sponsored/Sponcered";
 import ExploreOurProducts from "@/components/HomePage/ExploreOurProducts/ExploreOurProducts";
 import Assurity from "@/components/common/UI/Assurity/Assurity";
+import CategoryPhone from "@/assets/CategorySvg/CategoryPhone";
 
 export default function Home() {
   return (
-    <div className="mb-40">
+    <div>
       <Hero />
       <FlashSales />
       <CategoryBrowser />

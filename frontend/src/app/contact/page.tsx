@@ -1,4 +1,5 @@
 import MailBox from "@/assets/icons/MailBox";
+import Link from "next/link";
 import Phone from "@/assets/icons/Phone";
 import React from "react";
 
@@ -8,14 +9,14 @@ const Contact = (props: Props) => {
   return (
     <div className="container flex flex-col mx-auto my-10 overflow-x-hidden">
       <div className="inline-flex items-center mb-8">
-        <a href="/" className="text-text1">
+        <Link href="/" className="text-text1">
           Home
-        </a>
+        </Link>
         <div className="w-[1px] rotate-[24deg] mx-4 h-4 opacity-50 bg-black"></div>
-        <a href="/contact">Contact</a>
+        <Link href="/contact">Contact</Link>
       </div>
       <div className="my-10 w-full flex justify-between gap-10 p-1">
-        <div className="basis-2/6 flex p-8 justify-center rounded items-center flex-col gap-10 shadow-md shrink-0 max-w-96">
+        <div className="basis-2/6 flex p-8 justify-center rounded items-center flex-col gap-10 shadow-sm shrink-0 max-w-96">
           <div className="w-full flex flex-col gap-4 border-b pb-10">
             <div className="flex justify-start items-center gap-4">
               <div className="p-2 rounded-full bg-secondary2 mb-2">
@@ -40,7 +41,7 @@ const Contact = (props: Props) => {
             <p className="text-sm">Emails: support@exclusive.com</p>
           </div>
         </div>
-        <form className="basis-4/6 flex p-8 justify-center rounded items-center flex-col gap-10 w-full shadow-md text-text2">
+        <form className="basis-4/6 flex p-8 justify-center rounded items-center flex-col gap-10 w-full shadow-sm text-text2">
           <div className="w-full h-12 flex gap-4">
             <div className="flex-1 h-full">
               <input

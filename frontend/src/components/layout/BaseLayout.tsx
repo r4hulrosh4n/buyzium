@@ -9,7 +9,7 @@ interface BaseLayoutProps {
 const BaseLayout = ({ children }: BaseLayoutProps) => {
   return (
     <div className="flex flex-col bg-bg">
-      <TopHeader />
+      {/*<TopHeader />*/}
       <Header />
       {children}
       <Footer />

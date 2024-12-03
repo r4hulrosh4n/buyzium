@@ -19,7 +19,7 @@ const FlashSales = (props: Props) => {
   };
 
   useEffect(() => {
-    const countDownDate = new Date("Nov 24, 2024 00:00:00").getTime();
+    const countDownDate = new Date("Dec 5, 2024 00:00:00").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
