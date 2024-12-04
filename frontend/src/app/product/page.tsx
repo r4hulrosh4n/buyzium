@@ -3,6 +3,8 @@ import Link from "next/link";
 
 type Props = {};
 
+const Size = ["XS", "S", "M", "L", "XL"];
+
 const Product = (props: Props) => {
   return (
     <div className="container flex flex-col mx-auto my-10 overflow-x-hidden">
@@ -45,11 +47,20 @@ const Product = (props: Props) => {
           <div className="">
             <p className="text-xl tracking-wide">Colours:</p>
           </div>
-          <div>
-            <p>Size:</p>
-
-
+          <div className="flex items-center">
+            <p className="text-xl tracking-wide">Size:</p>
+            <div className="flex gap-4 px-6">
+              {Size.map((s, index) => (
+                <div className="size-8 justify-center text-center border-black border rounded hover:border-secondary2 hover:bg-secondary2 hover:text-primary flex items-center">
+                  <span className="text-xs font-semibold">{s}</span>
+                </div>
+              ))}
             </div>
+          </div>
+          <div className="flex ">
+            <div></div>
+            <div></div>
+          </div>
         </div>
       </div>
     </div>
