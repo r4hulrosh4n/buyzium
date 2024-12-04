@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import DropDown from "@/assets/icons/DropDown";
 
@@ -36,6 +38,12 @@ const cartProducts = [
 ];
 
 const Cart = (props: Props) => {
+  const [productQuantities, setProductQuantities] = useState(0);
+
+  const incrementQuantity = () => {
+    setProductQuantities((prev) => prev + 1);
+  };
+
   return (
     <div className="container flex flex-col mx-auto my-10 overflow-x-hidden">
       <div className="inline-flex items-center mb-8">
@@ -71,9 +79,12 @@ const Cart = (props: Props) => {
                   <div className="w-full h-full flex justify-between pr-6 items-center">
                     <span>${product.price}</span>
                     <div className="w-20 rounded border-2 border-black/40 flex justify-between items-center gap-2 py-1 px-3">
-                      <p className="">04</p>
+                      <p className="">{productQuantities}</p>
                       <div className="flex flex-col gap-0 items-center">
-                        <button className="outline-none h-5 flex items-center justify-between px-2 rounded active:bg-gray-200 hover:bg-gray-200">
+                        <button
+                          onClick={incrementQuantity}
+                          className="outline-none h-5 flex items-center justify-between px-2 rounded active:bg-gray-200 hover:bg-gray-200"
+                        >
                           <DropDown className="-rotate-90 w-4 p-0" />
                         </button>
                         <button className="outline-none h-5 flex items-center justify-between px-2 rounded active:bg-gray-200 hover:bg-gray-200">
@@ -81,7 +92,7 @@ const Cart = (props: Props) => {
                         </button>
                       </div>
                     </div>
-                    <span>$223</span>
+                    <span>${product.price * product.quantity}</span>
                   </div>
                 </div>
               </div>
@@ -113,7 +124,12 @@ const Cart = (props: Props) => {
             <h1>Cart Total</h1>
             <div className="w-full border-b pb-4 border-b-text1 flex justify-between items-center">
               <span>Subtotal:</span>
-              <span>$200</span>
+              <span>
+                $
+                {cartProducts.reduce((sum, product) => {
+                  return sum + product.price * product.quantity;
+                }, 0)}
+              </span>
             </div>
             <div className="w-full border-b pb-4 border-b-text1 flex justify-between items-center">
               <span>Shipping:</span>
@@ -121,7 +137,12 @@ const Cart = (props: Props) => {
             </div>
             <div className="w-full flex justify-between items-center">
               <span>Total:</span>
-              <span>$200</span>
+              <span>
+                $
+                {cartProducts.reduce((sum, product) => {
+                  return sum + product.price * product.quantity;
+                }, 0) + 0}
+              </span>
             </div>
             <button className="w-64 mx-auto py-4 px-8 rounded outline-none text-secondary bg-secondary2 hover:text-primary hover:border-none font-medium border-black">
               Process to checkout
