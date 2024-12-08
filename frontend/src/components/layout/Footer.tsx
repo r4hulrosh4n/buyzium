@@ -25,7 +25,7 @@ const Footer = () => {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="w-6 h-6 text-gray-500 ml-2"
+                  className="w-6 rotate-45 h-6 text-gray-500 ml-0"
                 >
                   <line x1="22" y1="2" x2="11" y2="13"></line>
                   <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>

@@ -5,6 +5,8 @@ import Delivery from "@/assets/icons/Delivery";
 import Plus from "@/assets/icons/Plus";
 import Minus from "@/assets/icons/Minus";
 import Star from "@/assets/icons/Star";
+import ReturnIcon from "@/assets/icons/ReturnIcon";
+import RelatedProducts from "@/components/Products/RelatedProducts";
 
 const Size = ["XS", "S", "M", "L", "XL"];
 
@@ -55,12 +57,8 @@ const Product = () => {
           <div className="w-full h-px my-2 bg-black/50"></div>
           <div className="flex items-center gap-2">
             <p className="text-xl tracking-wide mr-4">Colours:</p>
-            <button className="size-5 rounded-full bg-black flex items-center justify-center">
-              <div className="size-4 rounded-full bg-blue-300 border-2 border-white"></div>
-            </button>
-            <button className="size-5 rounded-full bg-secondary2 flex items-center justify-center">
-              <div className="size-4 rounded-full bg-secondary2 border-2 border-secondary2"></div>
-            </button>
+            <button className="size-5 rounded-full hover:border-2 hover:border-black active:border-2 active:border-black bg-blue-200 flex items-center justify-center"></button>
+            <button className="size-5 rounded-full hover:border-2 hover:border-black active:border-2 active:border-black bg-red-400 flex items-center justify-center"></button>
           </div>
           <div className="flex items-center">
             <p className="text-xl tracking-wide">Size:</p>
@@ -99,23 +97,28 @@ const Product = () => {
               <Delivery className="text-black" />
               <div>
                 <p className="font-medium">Free Delivery</p>
-                <span className="text-xs underline">
+                <span className="text-xs font-medium underline">
                   Enter your postal code for Delivery Availability
                 </span>
               </div>
             </div>
             <div className="flex gap-4 p-6 items-center">
-              <Delivery className="text-black" />
+              <ReturnIcon className="text-black" />
               <div>
                 <p className="font-medium">Free Delivery</p>
-                <span className="text-xs">
-                  Enter your postal code for Delivery Availability
-                </span>
+                <p className="font-medium text-xs">
+                  Free 30 Days Delivery Returns.{" "}
+                  <span className="font-medium text-xs underline">
+                    {" "}
+                    Details
+                  </span>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <RelatedProducts />
     </div>
   );
 };
