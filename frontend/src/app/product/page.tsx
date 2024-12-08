@@ -2,11 +2,17 @@ import React from "react";
 import Link from "next/link";
 import WishlistIcon from "@/assets/icons/WishlistIcon";
 import Delivery from "@/assets/icons/Delivery";
+import Image from "next/image";
 import Plus from "@/assets/icons/Plus";
 import Minus from "@/assets/icons/Minus";
 import Star from "@/assets/icons/Star";
 import ReturnIcon from "@/assets/icons/ReturnIcon";
 import RelatedProducts from "@/components/Products/RelatedProducts";
+import ProductImage1 from "@/assets/ProductCardImg/ProductImages/image63.png";
+import ProductImage2 from "@/assets/ProductCardImg/ProductImages/image61.png";
+import ProductImage3 from "@/assets/ProductCardImg/ProductImages/image59.png";
+import ProductImage4 from "@/assets/ProductCardImg/ProductImages/image58.png";
+import ProductImage5 from "@/assets/ProductCardImg/ProductImages/image57.png";
 
 const Size = ["XS", "S", "M", "L", "XL"];
 
@@ -24,12 +30,22 @@ const Product = () => {
       <div className="w-full flex my-10 gap-16 justify-between">
         <div className="mx-auto w-full flex gap-8">
           <div className="w-64 flex flex-col justify-between overflow-hidden">
-            <div className="w-full h-36 bg-secondary rounded"></div>
-            <div className="w-full h-36 bg-secondary rounded"></div>
-            <div className="w-full h-36 bg-secondary rounded"></div>
-            <div className="w-full h-36 bg-secondary rounded"></div>
+            <div className="w-full h-36 bg-secondary rounded flex justify-center items-center">
+              <Image src={ProductImage2} width={130} height={130} alt="image" />
+            </div>
+            <div className="w-full h-36 bg-secondary rounded flex justify-center items-center">
+              <Image src={ProductImage3} width={130} height={130} alt="image" />
+            </div>
+            <div className="w-full h-36 bg-secondary rounded flex justify-center items-center">
+              <Image src={ProductImage4} width={130} height={130} alt="image" />
+            </div>
+            <div className="w-full h-36 bg-secondary rounded flex justify-center items-center">
+              <Image src={ProductImage5} width={130} height={130} alt="image" />
+            </div>
           </div>
-          <div className="bg-secondary rounded w-full"></div>
+          <div className="bg-secondary rounded w-full flex justify-center items-center">
+            <Image src={ProductImage1} width={500} height={500} alt="image" />
+          </div>
         </div>
         <div className="w-6/12 flex flex-col gap-4">
           <h1 className="font-semibold tracking-wide text-2xl">
@@ -43,7 +59,7 @@ const Product = () => {
               <Star className="fill-gray-400 p-px" />
               <Star className="fill-gray-400 p-px" />
             </div>
-            <span className="border-r border-black text-sm text-black/50 pr-4">
+            <span className="border-r border-black/50 text-sm text-black/50 pr-4">
               (150 Reviews)
             </span>
             <span className="text-sm text-button1">In Stock</span>
@@ -60,7 +76,7 @@ const Product = () => {
             <button className="size-5 rounded-full hover:border-2 hover:border-black active:border-2 active:border-black bg-blue-200 flex items-center justify-center"></button>
             <button className="size-5 rounded-full hover:border-2 hover:border-black active:border-2 active:border-black bg-red-400 flex items-center justify-center"></button>
           </div>
-          <div className="flex items-center">
+          <div className="flex py-1 items-center">
             <p className="text-xl tracking-wide">Size:</p>
             <div className="flex gap-4 px-6">
               {Size.map((s, index) => (
@@ -97,9 +113,9 @@ const Product = () => {
               <Delivery className="text-black" />
               <div>
                 <p className="font-medium">Free Delivery</p>
-                <span className="text-xs font-medium underline">
+                <Link href="#" className="text-xs font-medium underline">
                   Enter your postal code for Delivery Availability
-                </span>
+                </Link>
               </div>
             </div>
             <div className="flex gap-4 p-6 items-center">
@@ -108,10 +124,10 @@ const Product = () => {
                 <p className="font-medium">Free Delivery</p>
                 <p className="font-medium text-xs">
                   Free 30 Days Delivery Returns.{" "}
-                  <span className="font-medium text-xs underline">
+                  <Link href="#" className="font-medium text-xs underline">
                     {" "}
                     Details
-                  </span>
+                  </Link>
                 </p>
               </div>
             </div>
