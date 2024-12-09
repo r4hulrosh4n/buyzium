@@ -61,7 +61,7 @@ const CheckOut = (props: Props) => {
               </div>
             </form>
             <div className="mt-4 flex gap-3">
-              <button className="size-6 rounded border border-2 border-secondary2"></button>
+              <button className="size-6 rounded border-2 border-secondary2"></button>
               <p className="text-text2">
                 Save this information for faster check-out next time
               </p>
@@ -121,6 +121,19 @@ const CheckOut = (props: Props) => {
                 </div>
               </div>
             </div>
+            <div className="w-full h-16 flex gap-6 justify-between">
+              <input
+                alt="Coupon Code"
+                placeholder="Coupon Code"
+                className="py-4 w-40 flex-grow px-8 rounded font-medium outline-none border-black border"
+              ></input>
+              <button className="py-4 px-14 rounded text-secondary outline-none bg-secondary2 hover:text-primary hover:border-none font-medium border-black">
+                Apply Coupon
+              </button>
+            </div>
+            <button className="py-4 w-60 px-14 rounded text-secondary outline-none bg-secondary2 hover:text-primary hover:border-none font-medium border-black">
+              Place Order
+            </button>
           </div>
         </div>
       </div>
