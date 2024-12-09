@@ -26,7 +26,7 @@ const WishList = (props: Props) => {
         <div className="inline-flex items-center justify-between">
           <div className="inline-flex items-center gap-4">
             <div className="w-6 h-12 bg-secondary2 rounded"></div>
-            <h1 className="text-xl">WishList</h1>
+            <h1 className="text-xl">Just For You</h1>
           </div>
           <button className="font-medium px-12 rounded-md hover:shadow-lg outline-none py-4 border-2 rounded-bg border-gray-400">
             See All

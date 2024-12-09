@@ -101,9 +101,13 @@ const Product = () => {
                 <Plus />
               </button>
             </div>
-            <button className="flex-grow rounded size-12 bg-secondary2 flex items-center justify-center font-medium outline-none">
+            <Link
+              href="/checkout"
+              alt="Buy Now"
+              className="flex-grow rounded size-12 bg-secondary2 flex items-center justify-center font-medium outline-none"
+            >
               <p className="text-white ">Buy Now</p>
-            </button>
+            </Link>
             <div className="ml-1 rounded size-10 flex items-center justify-center border border-black/50 hover:text-white hover:border-none hover:bg-secondary2 outline-none">
               <WishlistIcon className="p-px" />
             </div>
