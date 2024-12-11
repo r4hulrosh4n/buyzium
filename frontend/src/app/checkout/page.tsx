@@ -1,5 +1,10 @@
+"use client";
 import React from "react";
 import Link from "next/link";
+import BkaskIcon from "@/assets/icons/Payment/bkash.svg";
+import VisaIcon from "@/assets/icons/Payment/visa.svg";
+import NamanIcon from "@/assets/icons/Payment/naman.svg";
+import MasterIcon from "@/assets/icons/Payment/master.svg";
 
 type Props = {};
 
@@ -61,7 +66,21 @@ const CheckOut = (props: Props) => {
               </div>
             </form>
             <div className="mt-4 flex gap-3">
-              <button className="size-6 rounded border-2 border-secondary2"></button>
+              <button className="size-6 border-black/50 text-bg active:bg-secondary2 active:border-secondary2 rounded border-2 flex justify-center items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </button>
               <p className="text-text2">
                 Save this information for faster check-out next time
               </p>
@@ -110,7 +129,12 @@ const CheckOut = (props: Props) => {
                     <p>Bank</p>
                   </div>
                 </div>
-                <div className="w-52 h-6 bg-pink-800"></div>
+                <div className="flex items-center gap-3 h-10 overflow-y-hidden">
+                  <BkaskIcon alt="Visa" width={40} height={40} />
+                  <VisaIcon alt="Visa" width={40} height={40} />
+                  <MasterIcon alt="Visa" width={40} height={40} />
+                  <NamanIcon alt="Visa" width={40} height={40} />
+                </div>
               </div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
