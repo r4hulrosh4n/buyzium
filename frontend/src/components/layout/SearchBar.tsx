@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useState, useRef, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import SearchIcon from "@/assets/icons/SearchIcon";
 import CancleIcon from "@/assets/icons/CancleIcon";
 
@@ -68,6 +69,7 @@ const SearchSuggestions = [
 type Props = {};
 
 const SearchBar = (props: Props) => {
+  const router = useRouter();
   const [showSearch, setShowSearch] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const [searchResults, setSearchResults] = useState([]);
@@ -78,12 +80,18 @@ const SearchBar = (props: Props) => {
   };
 
   const handleSearchChange = (e) => {
-    setSearchValue((prev) => e.target.value);
+    setSearchValue(e.target.value);
 
     if (e.target.value) {
       setSearchResults(SearchSuggestions);
     } else {
       setSearchResults([]);
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" && searchValue.trim() !== "") {
+      router.push(`/search?query=${encodeURIComponent(searchValue.trim())}`);
     }
   };
 
@@ -93,7 +101,6 @@ const SearchBar = (props: Props) => {
     } else {
       document.removeEventListener("click", closeSearch);
     }
-
     return () => {
       document.removeEventListener("click", closeSearch);
     };
@@ -109,6 +116,7 @@ const SearchBar = (props: Props) => {
     <div
       ref={searchRef}
       onClick={toggleSearch}
+      onKeyDown={handleKeyDown}
       className="relative flex bg-secondary rounded py-2"
     >
       <input

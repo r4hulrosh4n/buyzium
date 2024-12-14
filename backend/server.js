@@ -1,15 +1,8 @@
-import express from "express";
-const app = express();
 import mongoose from "mongoose";
+import app from "./app.js";
 import dotenv from "dotenv";
 
 dotenv.config({ path: "./config.env" });
-
-app.use(express.json());
-
-app.use("/", (req, res) => {
-  res.send("hello world");
-});
 
 const DB = process.env.DATABASE.replace(
   "<PASSWORD>",
